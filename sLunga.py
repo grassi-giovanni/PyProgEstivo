@@ -71,6 +71,47 @@ def aCarrello():
 def cassaManuale(carrello):
     
     p = 0
+    
+    c = True
+    
+    d = True
+    
+    k = False
+    
+    print("Inserisci il codice a barre di ogni prodotto che vuoi acquistare, se il codice coincide verrà visualizzato un messaggio altrimente no", "\nCarrello:\n",carrello)
+    
+    while d == True:
+        
+        while c == True:
+            
+            cb = input("Inserisci il codice: ")
+            
+            for i in carrello:
+                
+                if cb == carrello.get(i)[1]:
+                    
+                    p += carrello.get(i)[0]
+                    
+                    print("Aggiunto correttamente")
+                    
+            ctf = input("Vuoi inserirne altri?")
+            
+            if ctf == "no":
+                c = False
+                    
+        if p > 500:
+            
+            print("Hai superato il budget!")
+        
+        else: k = True
+        
+        if k == True:
+            
+            print("Grazie di aver aquistato qua, a presto")
+            
+            d = False
+            
+            
 
 def cassaAuto(carrello):
     
